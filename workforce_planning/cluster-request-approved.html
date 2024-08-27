@@ -13,18 +13,18 @@
             font-size: 28px;
         }
 
-        a:hover{
+        .view-browser-link:hover{
             color: #d08448 !important;
         }
 
 
-        .start-btn{
+        #startBtn{
             color: #d08448;
             border: 1px solid #BCBBE1; 
             background-color: transparent; 
         }
 
-        .start-btn:hover{
+        #startBtn:hover{
             color: #fff;
             border: none;
             background-color: #d08448;
@@ -33,7 +33,6 @@
         @media screen and (max-width: 767px) {
             .content-tbl{
                 width: 100%;
-                margin: 0px 16px;
             }
         }
         
@@ -76,7 +75,9 @@
         <table width="100%" style="padding: 10px 24px; text-align: center; margin-bottom: 16px;">
             <tr>
                 <td>
-                    <a href="https://nymbleup.com/" style="color: #BCBBE1; font-size: 13px; font-weight: 500; line-height: 20px; text-decoration: underline;">view in browser</a>
+                    <a href="https://nymbleup.com/" style="color: #BCBBE1; font-size: 13px; font-weight: 500; line-height: 20px; text-decoration: underline;" class="view-browser-link">
+                        view in browser
+                    </a>
                 </td>
             </tr>
             <tr>
@@ -106,12 +107,12 @@
             
             <!-- store name row -->
             <tr>
-                <td style=" width: 50%;">
+                <td style=" width: 50%;padding: 10px 0px;">
                     <p style="color: #393f4b; font-size: 15px; font-weight: bold;margin: 0px;">
                         Store Name
                     </p>
                 </td>
-                <td style="width: 50%;">
+                <td style="width: 50%;padding: 10px 0px;text-align: center;">
                     <p style="color: #667085;font-size: 14px; font-weight: 500;margin: 0px;">
                         {{ requesting_outlet_name }}
                     </p>
@@ -120,12 +121,12 @@
 
             <!-- From row -->
             <tr>
-                <td style=" width: 50%;">
+                <td style=" width: 50%;padding: 10px 0px;">
                     <p style="color: #393f4b; font-size: 15px; font-weight: bold;margin: 0px;">
                         From
                     </p>
                 </td>
-                <td style="width: 50%;">
+                <td style="width: 50%;padding: 10px 0px;text-align: center;">
                     <p style="color: #667085;font-size: 14px; font-weight: 500;margin: 0px;">
                         {{requesting_employee_name}}
                     </p>
@@ -135,16 +136,14 @@
 
             <!-- Employee name row -->
             <tr>
-                <td style=" width: 50%;">
+                <td style=" width: 50%;padding: 10px 0px;">
                     <p style="color: #393f4b; font-size: 15px; font-weight: bold;margin: 0px;">
                         Employee
                     </p>
                 </td>
-                <td style="width: 50%;">
+                <td style="width: 50%;padding: 10px 0px;text-align: center;">
                     <p style="color: #667085;font-size: 14px; font-weight: 500;margin: 0px;">
-                        {{ employee_name }}
-                        <br/>
-                        {{employee_function}}
+                        {{ employee_name }} ({{employee_function}})
                     </p>
                 </td>
             </tr>
@@ -152,12 +151,12 @@
 
             <!-- Date row -->
             <tr>
-                <td style=" width: 50%;">
+                <td style=" width: 50%;padding: 10px 0px;">
                     <p style="color: #393f4b; font-size: 15px; font-weight: bold;margin: 0px;">
                         Date
                     </p>
                 </td>
-                <td style="width: 50%;">
+                <td style="width: 50%;padding: 10px 0px;text-align: center;">
                     <p style="color: #667085;font-size: 14px; font-weight: 500;margin: 0px;">
                         {{ date }}
                     </p>
@@ -167,12 +166,12 @@
 
             <!-- Time row -->
             <tr>
-                <td style=" width: 50%;">
+                <td style=" width: 50%;padding: 10px 0px;">
                     <p style="color: #393f4b; font-size: 15px; font-weight: bold;margin: 0px;">
                         Time
                     </p>
                 </td>
-                <td style="width: 50%;">
+                <td style="width: 50%;padding: 10px 0px;text-align: center;">
                     <p style="color: #667085;font-size: 14px; font-weight: 500;margin: 0px;">
                         {{start_time}} to {{end_time}}
                     </p>
@@ -181,10 +180,28 @@
 
             <!-- Sign In row -->
             <tr>
-                <td style="padding-top: 16px;text-align: center;" colspan="2">
-                    <button class="start-btn" style="font-size: 16px; font-weight: 600; min-width: 40%; padding: 10px 8px; border-radius: 5px;cursor: pointer;">
+                <td style="padding-top: 32px;text-align: center;" colspan="2">
+                    <a href="https://amplitudeworld-dashboard-ui.firebaseapp.com/cluster"
+                     target="_blank" 
+                     id="startBtn" 
+                     style="display: inline-block; font-size: 16px; font-weight: 555; min-width: 25%; padding: 10px 8px; border-radius: 5px;cursor: pointer;text-decoration: none;">
                         SIGN IN
-                    </button>
+                    </a>
+                </td>
+            </tr>
+
+            <!-- fialure row -->              
+            <tr>
+                <td style="padding-top: 10px;text-align: center;" colspan="2">
+                    <p style="text-align: center; color: #8F98B1; font-size: 13px; font-weight: 450;">
+                        If the button above doesn't work, copy and paste the following link into your browser:
+                    </p>
+                    <a href="{{ login_url }}" style="color: #d08448;font-size: 14px;font-weight: 500;text-decoration: none;">
+                        {{ login_url }}
+                    </a>
+                    <p style="text-align: center; color: #667085; font-size: 14px; font-weight: 400; margin: 32px 0px 0px 0px;">
+                        If you have any questions, feel free to reach out to us. We’re here to help! 😊
+                    </p>
                 </td>
             </tr>
         </table>

@@ -9,18 +9,18 @@
             font-size: 28px;
         }
 
-        a:hover{
+        .view-browser-link:hover{
             color: #d08448 !important;
         }
 
 
-        .start-btn{
+        #startBtn{
             color: #d08448;
             border: 1px solid #BCBBE1; 
             background-color: transparent; 
         }
 
-        .start-btn:hover{
+        #startBtn:hover{
             color: #fff;
             border: none;
             background-color: #d08448;
@@ -47,7 +47,7 @@
 
             .desktop-footer-table{
                 display: inline-table;
-            }
+            } 
         }
     </style>
 </head>
@@ -58,7 +58,9 @@
         <table width="100%" style="padding: 10px 24px; text-align: center; margin-bottom: 16px;">
             <tr>
                 <td>
-                    <a href="https://nymbleup.com/" style="color: #BCBBE1; font-size: 13px; font-weight: 500; line-height: 20px; text-decoration: underline;">view in browser</a>
+                    <a href="https://nymbleup.com/" style="color: #BCBBE1; font-size: 13px; font-weight: 500; line-height: 20px; text-decoration: underline;" class="view-browser-link">
+                        view in browser
+                    </a>
                 </td>
             </tr>
             <tr>
@@ -93,9 +95,25 @@
             </tr>
             <tr>
                 <td style="padding-top: 10px;">
-                    <button class="start-btn" style="font-size: 18px; font-weight: 600; min-width: 40%; padding: 12px 8px; border-radius: 5px;cursor: pointer;">
-                        Activate Your Acount
-                    </button>
+                    <a href="{{ domain | safe }}/{{ url | safe }}" 
+                    id="startBtn" 
+                    style="display: inline-block; font-size: 16px; font-weight: 555; min-width: 25%; padding: 10px 8px; border-radius: 5px;cursor: pointer;text-decoration: none;">
+                        Activate Your Account
+                    </a>
+                </td>
+            </tr>
+            <!-- failure row -->
+            <tr>
+                <td style="padding: 10px 0px; text-align: center;" colspan="2">
+                    <p style="text-align: center; color: #8F98B1; font-size: 13px; font-weight: 450;">
+                        If the button above doesn't work, copy and paste the following link into your browser:
+                    </p>
+                    <a href="{{ login_url }}" style="color: #d08448;font-size: 14px;font-weight: 500;text-decoration: none;">
+                        {{ login_url }}
+                    </a>
+                    <p style="text-align: center; color: #667085; font-size: 14px; font-weight: 400; margin: 32px 0px 0px 0px;">
+                        If you have any questions, feel free to reach out to us. We’re here to help! 😊
+                    </p>
                 </td>
             </tr>
         </table>

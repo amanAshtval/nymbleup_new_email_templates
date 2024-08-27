@@ -4,23 +4,23 @@
     <title>send login details</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+    <style> 
         .slogan-p{
             font-size: 28px;
         }
 
-        a:hover{
+        .view-browser-link:hover{
             color: #d08448 !important;
         }
 
 
-        .start-btn{
+        #startBtn{
             color: #d08448;
             border: 1px solid #BCBBE1; 
             background-color: transparent; 
         }
 
-        .start-btn:hover{
+        #startBtn:hover{
             color: #fff;
             border: none;
             background-color: #d08448;
@@ -58,7 +58,7 @@
         <table width="100%" style="padding: 10px 24px; text-align: center; margin-bottom: 16px;">
             <tr>
                 <td>
-                    <a href="https://nymbleup.com/" style="color: #BCBBE1; font-size: 13px; font-weight: 500; line-height: 20px; text-decoration: underline;">
+                    <a href="https://nymbleup.com/" style="color: #BCBBE1; font-size: 13px; font-weight: 500; line-height: 20px; text-decoration: underline;" class="view-browser-link">
                         view in browser
                     </a>
                 </td>
@@ -100,10 +100,13 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding-top: 10px;">
-                    <button class="start-btn" style="font-size: 18px; font-weight: 600; min-width: 40%; padding: 12px 8px; border-radius: 5px;cursor: pointer;">
-                        Login Now
-                    </button>                    
+                <td style="padding-top: 20px;">
+                    <a href="{{ login_url }}" 
+                    target="_blank" 
+                    id="startBtn" 
+                    style="display: inline-block; font-size: 16px; font-weight: 555; min-width: 25%; padding: 10px 8px; border-radius: 5px;cursor: pointer;text-decoration: none;">
+                        SIGN IN
+                    </a>                   
                 </td>
             </tr>
             <tr>
@@ -111,7 +114,7 @@
                     <p style="text-align: center; color: #8F98B1; font-size: 13px; font-weight: 450;">
                         If the button above doesn't work, copy and paste the following link into your browser:
                     </p>
-                    <a href="{{ login_url }}" style="color: #d08448;font-size: 14px;font-weight: 500;text-decoration: none;">
+                    <a href="{{ login_url }}" target="_blank" style="color: #d08448;font-size: 14px;font-weight: 500;text-decoration: none;">
                         {{ login_url }}
                     </a>
                     <p style="text-align: center; color: #667085; font-size: 14px; font-weight: 400; margin: 32px 0px 0px 0px;">
