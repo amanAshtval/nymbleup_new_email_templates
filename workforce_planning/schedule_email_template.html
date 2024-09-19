@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        .slogan-p{
-            font-size: 28px;
-        }
-
         .view-browser-link:hover{
             color: #d08448 !important;
         }
@@ -33,10 +29,6 @@
 
             .desktop-footer-table{
                 display: none;
-            }
-
-            .slogan-p{
-                font-size: 20px;
             }
         }
 
@@ -73,24 +65,11 @@
         <!-- email-content -->
         <table width="100%" style="text-align: center; min-height: 350px; padding: 10px;">
             <tr>
-                <td>
-                    <h4 style="color: #d08448; font-size: 16px; font-weight: 600; line-height: 24px; margin: 0px;">
-                        Welcome To NymbleUp !
-                    </h4>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-top: 10px;">
-                    <p style="color: #101828; font-weight: 600; line-height: 32px; text-align: center; margin: 0px;" class="slogan-p">
-                        Automating key decisions In workforce management
-                    </p>
-                </td>
-            </tr>
-            <tr>
                 <td style="padding-top: 16px;">
-                    <p style="color: #667085; font-size: 15px; font-weight: 500; line-height: 24px; text-align: center;">
-                        Hi, {{ User Name }}<br/>
-                        The schedule for outlet {{ outlet_name }} is ready. Click the button to view.
+                    <p style="color: #667085; font-size: 16px; font-weight: 500; line-height: 24px; text-align: center;">
+                        Hi, <strong>{{ user_name }}</strong>
+                        <br/>
+                        The schedule for outlet <strong>{{ outlet_name }}</strong> is ready. Click the button to view.
                     </p>
                 </td>
             </tr>
