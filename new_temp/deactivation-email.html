@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deactivation Scheduled</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .slogan-p{
+            font-size: 28px;
+        }
+
+        .view-browser-link:hover{
+            color: #d08448 !important;
+        }
+
+
+        #startBtn{
+            color: #d08448;
+            border: 1px solid #BCBBE1; 
+            background-color: transparent; 
+        }
+
+        #startBtn:hover{
+            color: #fff;
+            border: none;
+            background-color: #d08448;
+        }
+
+        @media screen and (max-width:575px) {
+            .mobile-footer-table{
+                display: inline-table;
+            }
+
+            .desktop-footer-table{
+                display: none;
+            }
+
+            .slogan-p{
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (min-width:576px) {
+            .mobile-footer-table{
+                display: none;
+            }
+
+            .desktop-footer-table{
+                display: inline-table;
+            } 
+        }
+
+        /* table tr td {
+            border: 1px solid black;
+        } */
+    </style>
+</head>
+<body style="font-family: 'Inter', sans-serif; margin: 0px;">
+    <div style="min-height: 600px;">
+
+        <!-- email header -->
+        <table width="100%" style="padding: 10px 24px; text-align: center; margin-bottom: 16px;">
+            <tr>
+                <td>
+                    <a href="https://nymbleup.com/" style="color: #BCBBE1; font-size: 13px; font-weight: 500; line-height: 20px; text-decoration: underline;" class="view-browser-link">
+                        view in browser
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 10px;">
+                    <img src="https://res.cloudinary.com/dh4dcboea/image/upload/v1724561580/logo-05_1_ocjo3n.png" alt="Logo" style="width: 206px; height: 92px;" />
+                </td>
+            </tr>
+        </table>
+
+        <!-- email-content -->
+        <table width="100%" style="min-height: 350px; padding: 10px;">
+            
+            <tr>
+                <td style="padding-top: 18px;text-align: center;">
+                    <h3>Location Deactivation Scheduled for {{location_name}}</h3>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-top: 16px; padding-left: 32px; padding-right: 32px;">
+                    <p style="color: #667085; font-size: 14px; font-weight: 500; line-height: 24px;">
+                        Hello <b>{{Primary User Name / Admin Name}}</b>,<br/>
+                        This is to inform you that the location <b>"{{location_name}}"</b> has been scheduled for deactivation.                      
+                    </p>
+                    <p style="color: #667085; font-size: 14px; font-weight: 500; line-height: 24px;">
+                        Deactivation Details:<br/>
+                        Start Date: <b>{{start_date}}</b><br/>
+                        End Date: <b>{{end_date}}</b>                        
+                    </p>
+                    <p style="color: #667085; font-size: 14px; font-weight: 500; line-height: 24px;">
+                        Status Updates:<br/>
+                        the location will remain active until <b>{{start_date}}</b> and will become inactive on <b>{{start_date}}</b>.
+                        <br/>
+                        No checklists/Schedule/reports will be generated during the inactive period.
+                    </p>
+                    <p style="color: #667085; font-size: 14px; font-weight: 500; line-height: 24px;">
+                        Action Performed By: <b>{{User Role (Admin/Primary User)}} - {{user_name}}</b><br/>
+                        Date & Time of Action: <b>{{timestamp}}</b>
+                    </p>
+                    <p style="text-align: center; color: #667085; font-size: 13px; font-weight: 400; margin: 32px 0px 0px 0px;">
+                        If you have any questions, feel free to reach out to us. We’re here to help! 😊
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- email footer table for mobile and small device -->
+        <table width="100%" style="padding: 10px;margin-top: 32px;" class="mobile-footer-table">
+            <tr>
+                <td style="width: 100%;text-align: center;">                    
+                    <a href="https://www.youtube.com/channel/UCOk9L8WNIwSE4Y8E-7MEPSA" style="text-decoration: none;">
+                        <img src="https://res.cloudinary.com/dh4dcboea/image/upload/v1724566638/Marka-Email-Generator_odqjet.png" alt="Social Icon 4" style="width: 32px; height: 32px;margin-right: 10px;" />
+                    </a>                 
+                    <a href="https://www.linkedin.com/company/nymbleup-solutions-pvt-ltd" style="text-decoration: none;">
+                        <img src="https://res.cloudinary.com/dh4dcboea/image/upload/v1724566584/Marka-Email-Generator_yeipss.png" alt="Social Icon 5" style="width: 32px; height: 32px;margin-right: 10px;" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100%;text-align: center;">
+                    <p style="color: #667085; font-size: 14px; font-weight: 600;">Thank you</p>
+                    <a href="mailto:info@nymbleup.com" 
+                    style="color: #8F98B1; font-size: 13px; font-weight: 400; line-height: 20px; margin: 0px;text-decoration: none;">
+                        info@nymbleup.com
+                    </a>                    
+                </td>                
+            </tr>
+        </table>
+
+        <!-- email footer table for desktop -->
+        <table width="100%" style="padding: 16px;margin-top: 32px;" class="desktop-footer-table">
+            <tr>
+                <td style="width: 50%; text-align: center;">
+                    <p style="color: #667085; font-size: 14px; font-weight: 600;">Thank you</p>
+                    <a href="mailto:info@nymbleup.com" 
+                    style="color: #8F98B1; font-size: 13px; font-weight: 400; line-height: 20px; margin: 0px;text-decoration: none;">
+                        info@nymbleup.com
+                    </a>
+                </td>
+                <td style="width: 50%;text-align: center;">   
+                    <a href="https://www.youtube.com/channel/UCOk9L8WNIwSE4Y8E-7MEPSA" style="text-decoration: none;">
+                        <img src="https://res.cloudinary.com/dh4dcboea/image/upload/v1724566638/Marka-Email-Generator_odqjet.png" alt="Social Icon 4" style="width: 32px; height: 32px;margin-right: 10px;" />
+                    </a>                 
+                    <a href="https://www.linkedin.com/company/nymbleup-solutions-pvt-ltd" style="text-decoration: none;">
+                        <img src="https://res.cloudinary.com/dh4dcboea/image/upload/v1724566584/Marka-Email-Generator_yeipss.png" alt="Social Icon 5" style="width: 32px; height: 32px;margin-right: 10px;" />
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
